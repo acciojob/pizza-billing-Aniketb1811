@@ -5,6 +5,11 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private String bill = "";
+    private int basePrice;
+
+    private final int cheesePrice = 80;
+    private int toppingsPrice;
+    private final int bagPrice = 20;
 
     private boolean isCheeseAdded  = false;
 
@@ -16,12 +21,14 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
-            price += 300;
-            bill += "Base Price Of The Pizza: 300\n";
+            basePrice = 300;
+            toppingsPrice = 70;
+            price = basePrice;
         }
         else {
-            price += 400;
-            bill += "Base Price Of The Pizza: 400\n";
+            basePrice = 400;
+            toppingsPrice = 120;
+            price = basePrice;
         }
 
     }
@@ -34,7 +41,7 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if (!isCheeseAdded){
-            price += 80;
+            price += cheesePrice;
             isCheeseAdded = true;
         }
     }
@@ -42,11 +49,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if (!isToppingsAdded){
-            if (isVeg) {
-                price += 70;
-            } else {
-                price += 120;
-            }
+            price += toppingsPrice;
             isToppingsAdded = true;
         }
     }
@@ -61,16 +64,13 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
+        bill += "Base Price Of The Pizza: " + basePrice + "\n";
+
         if(isCheeseAdded){
-            bill += "Extra Cheese Added: 80\n";
+            bill += "Extra Cheese Added: " + cheesePrice + "\n";
         }
         if(isToppingsAdded){
-            if(isVeg){
-                bill += "Extra Toppings Added: 70\n";
-            }
-            else{
-                bill += "Extra Toppings Added: 120\n";
-            }
+            bill += "Extra Toppings Added: " + toppingsPrice + "\n";
         }
         if(isTakeawayAdded){
             bill += "Paperbag Added: 20\n";
