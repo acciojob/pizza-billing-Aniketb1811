@@ -73,7 +73,7 @@ public class Pizza {
             bill += "Extra Toppings Added: " + toppingsPrice + "\n";
         }
         if(isTakeawayAdded){
-            bill += "Paperbag Added: " + basePrice + "\n";
+            bill += "Paperbag Added: " + bagPrice + "\n";
         }
 
         bill += "Total Price: " + getPrice() + "\n";
