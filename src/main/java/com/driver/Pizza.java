@@ -2,8 +2,8 @@ package com.driver;
 
 public class Pizza {
     private int price;
-    private final Boolean isVeg;
-    private String bill = "";
+    private Boolean isVeg;
+    private String bill;
     private final int basePrice;
     private final int cheesePrice = 80;
     private final int toppingsPrice;
@@ -58,7 +58,7 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        bill += "Base Price Of The Pizza: " + basePrice + "\n";
+        bill = "Base Price Of The Pizza: " + basePrice + "\n";
 
         if(isCheeseAdded){
             bill += "Extra Cheese Added: " + cheesePrice + "\n";
@@ -70,7 +70,7 @@ public class Pizza {
             bill += "Paperbag Added: " + bagPrice + "\n";
         }
 
-        bill += "Total Price: " + getPrice() + "\n";
+        bill += "Total Price: " + price + "\n";
 
         return this.bill;
     }
