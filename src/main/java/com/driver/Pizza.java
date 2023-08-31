@@ -27,6 +27,7 @@ public class Pizza {
 
     }
 
+
     public int getPrice(){
         return this.price;
     }
@@ -69,7 +70,7 @@ public class Pizza {
             bill += "Paperbag Added: " + bagPrice + "\n";
         }
 
-        bill += "Total Price: " + getPrice();
+        bill += "Total Price: " + getPrice() + "\n";
 
         return this.bill;
     }
