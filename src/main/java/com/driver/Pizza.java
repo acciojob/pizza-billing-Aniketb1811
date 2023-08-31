@@ -1,9 +1,8 @@
 package com.driver;
 
 public class Pizza {
-
     private int price;
-    private Boolean isVeg;
+    private final Boolean isVeg;
     private String bill = "";
     private final int basePrice;
     private final int cheesePrice = 80;
@@ -70,7 +69,7 @@ public class Pizza {
             bill += "Paperbag Added: " + bagPrice + "\n";
         }
 
-        bill += "Total Price: " + getPrice() + "\n";
+        bill += "Total Price: " + getPrice();
 
         return this.bill;
     }

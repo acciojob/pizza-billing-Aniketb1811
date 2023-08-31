@@ -15,10 +15,10 @@ public class Main {
     p.addTakeaway();
     System.out.println(p.getBill());
 
-//    Pizza pizza = new Pizza(false);
-//    pizza.addExtraToppings();
-//    pizza.addExtraCheese();
-//    pizza.addTakeaway();
-//    System.out.println(pizza.getBill());
+    Pizza pizza = new Pizza(false);
+    pizza.addExtraToppings();
+    pizza.addExtraCheese();
+    pizza.addTakeaway();
+    System.out.println(pizza.getBill());
   }
 }
